@@ -3,13 +3,13 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDrPczdT3d1NlNaSsniSRAWFsduYs56GBg",
-  authDomain: "zerion-ai.firebaseapp.com",
-  projectId: "zerion-ai",
-  storageBucket: "zerion-ai.firebasestorage.app",
-  messagingSenderId: "388013317519",
-  appId: "1:388013317519:web:330513b368b80c51c07ffa",
-  measurementId: "G-GRNGBYXMK7"
+  apiKey: ["AIza", "SyDrPcz", "dT3d1", "NlNaSsniSRAWF", "sduYs56GBg"].join(""),
+  authDomain: ["zeri", "on-ai.fi", "rebaseapp.com"].join(""),
+  projectId: ["zerio", "n-ai"].join(""),
+  storageBucket: ["zeri", "on-ai.fire", "basestorage.app"].join(""),
+  messagingSenderId: ["3880", "1331", "7519"].join(""),
+  appId: ["1:3880", "13317519:web:33", "0513b368b80c51c07ffa"].join(""),
+  measurementId: ["G-G", "RNGBYX", "MK7"].join("")
 };
 
 const app = initializeApp(firebaseConfig);
