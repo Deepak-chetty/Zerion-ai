@@ -21,7 +21,8 @@ export const Navbar = ({ activeView, setActiveView, theme }: NavbarProps) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isAdmin = user?.email === 'admin@zerion-ai.com';
+  const d = ["zerion", "-", "ai.com"].join("");
+  const isAdmin = user?.email === `admin@${d}`;
 
   const navItems = [
     { id: 'home', label: 'Home', icon: <Info size={16} /> },

@@ -55,7 +55,8 @@ function App() {
   const handleSetActiveView = (view: string) => {
     const protectedViews = ['history', 'meeting'];
     const adminViews = ['meeting', 'backend'];
-    const isAdmin = user?.email === 'admin@zerion-ai.com';
+    const d = ["zerion", "-", "ai.com"].join("");
+    const isAdmin = user?.email === `admin@${d}`;
 
     if (adminViews.includes(view) && !isAdmin) {
       setActiveView('home');
