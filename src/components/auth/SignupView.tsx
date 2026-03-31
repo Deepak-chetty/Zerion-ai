@@ -14,7 +14,7 @@ export const SignupView = ({ onSuccess, onSwitchToLogin }: SignupViewProps) => {
   const [password, setPassword] = useState('');
   const [showApiInfo, setShowApiInfo] = useState(false);
   const [apiKeys, setApiKeys] = useState({
-    gemini: import.meta.env.VITE_GEMINI_API_KEY || '',
+    gemini: '',
     openai: '',
     anthropic: ''
   });

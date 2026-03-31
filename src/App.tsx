@@ -28,11 +28,9 @@ function App() {
   const [redirectView, setRedirectView] = useState<string | null>(null);
   const [transcript, setTranscript] = useState('');
   
-  // Initialize API Key from localStorage, env, or default fallback
+  // Initialize API Key exclusively from localStorage to prevent Netlify from exposing env vars in the bundle
   const [apiKey, setApiKey] = useState(
-    localStorage.getItem('zerion_temp_key') || 
-    import.meta.env.VITE_GEMINI_API_KEY || 
-    ''
+    localStorage.getItem('zerion_temp_key') || ''
   );
   
   const [useMockMode, setUseMockMode] = useState(false);
@@ -47,11 +45,9 @@ function App() {
   
   // VideoSDK State
   const [videoToken, setVideoToken] = useState(
-    localStorage.getItem('zerion_video_token') ||
-    import.meta.env.VITE_VIDEOSDK_TOKEN || 
-    ''
+    localStorage.getItem('zerion_video_token') || ''
   );
-  const [meetingId, setMeetingId] = useState(import.meta.env.VITE_VIDEOSDK_MEETING_ID || '');
+  const [meetingId, setMeetingId] = useState('');
 
   const { isAuthenticated, user, updateUser } = useAuth() as any;
 
